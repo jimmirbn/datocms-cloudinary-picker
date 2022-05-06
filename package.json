@@ -1,5 +1,5 @@
 {
-  "name": "my-first-plugin",
+  "name": "datocms-plugin-cloudinary-picker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -44,10 +44,17 @@
   "devDependencies": {
     "cross-env": "^7.0.3"
   },
+  "homepage": "https://github.com/jimmirbn/datocms-cloudinary-picker#readme",
+  "description": "A plugin that turns a JSON field into a Cloudinary picker",
+  "keywords": [
+    "datocms-plugin",
+    "datocms-plugin-cloudinary",
+    "cloudinary"
+  ],
   "datoCmsPlugin": {
     "title": "Cloudinary picker",
-    "previewImage": "",
-    "coverImage": "public/logo.png",
-    "entryPoint": "public/index.html"
+    "previewImage": "docs/cloudinary-web-app.jpg",
+    "coverImage": "docs/logo.png",
+    "entryPoint": "build/index.html"
   }
 }
