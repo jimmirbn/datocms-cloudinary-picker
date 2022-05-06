@@ -51,12 +51,9 @@
     "datocms-plugin-cloudinary",
     "cloudinary"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jimmirbn/datocms-cloudinary-picker.git"
+    "url": "https://github.com/jimmirbn/datocms-cloudinary-picker.git"
   },
   "url": "https://github.com/jimmirbn/datocms-cloudinary-picker/issues",
   "datoCmsPlugin": {
