@@ -1,0 +1,53 @@
+{
+  "name": "my-first-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^16.11.27",
+    "@types/react": "^17.0.44",
+    "@types/react-dom": "^18.0.3",
+    "cloudinary-react": "^1.7.2",
+    "datocms-plugin-sdk": "^0.5.2",
+    "datocms-react-ui": "^0.5.2",
+    "lodash.get": "^4.4.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-final-form": "^6.5.9",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "start": "cross-env BROWSER='none' PUBLIC_URL='/' react-scripts start",
+    "build": "cross-env PUBLIC_URL='.' react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && firebase deploy",
+    "prepublishOnly": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "datoCmsPlugin": {
+    "title": "Cloudinary picker",
+    "previewImage": "",
+    "coverImage": "public/logo.png",
+    "entryPoint": "public/index.html"
+  }
+}
