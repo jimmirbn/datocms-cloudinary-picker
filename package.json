@@ -59,7 +59,7 @@
   "datoCmsPlugin": {
     "title": "Cloudinary picker",
     "previewImage": "docs/cloudinary-web-app.jpg",
-    "coverImage": "docs/logo.png",
+    "coverImage": "docs/cover.png",
     "entryPoint": "build/index.html"
   }
 }
