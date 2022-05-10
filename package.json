@@ -1,6 +1,6 @@
 {
   "name": "datocms-plugin-cloudinary-picker",
-  "version": "0.1.2-next",
+  "version": "0.1.2",
   "private": false,
   "dependencies": {
     "@types/node": "^16.11.27",
