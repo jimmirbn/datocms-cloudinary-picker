@@ -1,14 +1,17 @@
 {
   "name": "datocms-plugin-cloudinary-picker",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "private": false,
   "dependencies": {
+    "@cloudinary/react": "^1.4.0",
+    "@cloudinary/url-gen": "^1.8.0",
     "@types/node": "^16.11.27",
     "@types/react": "^17.0.44",
     "@types/react-dom": "^18.0.3",
     "cloudinary-react": "^1.7.2",
     "datocms-plugin-sdk": "^0.5.2",
     "datocms-react-ui": "^0.5.2",
+    "image-focus": "^1.2.0",
     "lodash.get": "^4.4.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -52,7 +55,9 @@
   "keywords": [
     "datocms-plugin",
     "datocms-plugin-cloudinary",
-    "cloudinary"
+    "cloudinary",
+    "focal point",
+    "image-focus"
   ],
   "repository": {
     "type": "git",

@@ -11,6 +11,10 @@ type PropTypes = {
 export interface FieldImage extends Media {
   caption?: string;
   alt?: string;
+  focalPoint?: {
+    x: string;
+    y: string;
+  };
 }
 
 export function CloudinaryPickerButton({ ctx, label }: PropTypes) {
@@ -31,6 +35,7 @@ export function CloudinaryPickerButton({ ctx, label }: PropTypes) {
         created_by: item.created_by,
         duration: item.duration,
         format: item.format,
+        width: item.width,
         height: item.height,
         metadata: item.metadata,
         public_id: item.public_id,
@@ -41,7 +46,6 @@ export function CloudinaryPickerButton({ ctx, label }: PropTypes) {
         uploaded_by: item.uploaded_by,
         url: item.url,
         version: item.version,
-        width: item.width,
       };
 
       if (item.context && item.context.custom) {

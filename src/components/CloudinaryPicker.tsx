@@ -9,20 +9,20 @@ type PropTypes = {
 export type Media = {
   public_id: string;
   resource_type: string;
-  secure_url: string;
+  secure_url?: string;
   width: number;
   height: number;
-  created_at: Date;
-  bytes: number;
+  created_at?: Date;
+  bytes?: number;
   tags: string[];
-  created_by: string | null;
+  created_by?: string | null;
   duration: number | null;
   format: string;
-  metadata: string[];
+  metadata?: string[];
   type: string;
-  uploaded_by: string;
-  url: string;
-  version: number;
+  uploaded_by?: string;
+  url?: string;
+  version?: number;
   context?: {
     custom?: unknown;
   };

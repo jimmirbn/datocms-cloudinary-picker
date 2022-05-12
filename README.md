@@ -1,6 +1,7 @@
 # DatoCMS Cloudinary picker
 
 A plugin that turns a JSON field into a Cloudinary picker
+Including Focal point picker
 
 ## Configuration
 
