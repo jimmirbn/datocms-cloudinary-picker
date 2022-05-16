@@ -27,3 +27,6 @@ Field in action
 ![Demo](docs/cloudinary-asset-button.jpg)
 ![Demo](docs/cloudinary-web-app.jpg)
 ![Demo](docs/final-result.jpg)
+
+Output
+![Demo](docs/output.png)

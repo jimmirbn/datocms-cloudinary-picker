@@ -1,6 +1,6 @@
 {
   "name": "datocms-plugin-cloudinary-picker",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "dependencies": {
     "@cloudinary/react": "^1.4.0",
@@ -66,7 +66,7 @@
   "url": "https://github.com/jimmirbn/datocms-cloudinary-picker/issues",
   "datoCmsPlugin": {
     "title": "Cloudinary picker",
-    "previewImage": "docs/cloudinary-web-app.jpg",
+    "previewImage": "docs/demo.mp4",
     "coverImage": "docs/cover.png",
     "entryPoint": "build/index.html"
   }
