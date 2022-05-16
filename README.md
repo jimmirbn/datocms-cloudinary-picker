@@ -1,13 +1,18 @@
 # DatoCMS Cloudinary picker
 
-A plugin that turns a JSON field into a Cloudinary picker\
-Including Focal point picker
+A plugin that turns a JSON field into a Cloudinary picker
+
+**Including Focal point picker**
 
 ## Configuration
 
 Configure the plugin with Cloudinary cloud name & Cloudinary public api key
 
-Users will still need to separately log into Cloudinary when the widget opens, unless they have previously logged in via the Cloudinary console
+```
+Users will still need to separately log into Cloudinary when the widget opens.
+- unless they have previously logged in via the Cloudinary console
+- NB! You maybe have to disable trackers and add blocking when logging in the Cloudinary - e.g Brave blocks this.
+```
 
 Plugin config
 ![Demo](docs/config.jpg)
