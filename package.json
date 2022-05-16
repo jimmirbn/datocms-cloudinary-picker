@@ -1,6 +1,6 @@
 {
   "name": "datocms-plugin-cloudinary-picker",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "dependencies": {
     "@cloudinary/react": "^1.4.0",
