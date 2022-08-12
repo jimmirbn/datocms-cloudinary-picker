@@ -1,6 +1,6 @@
 {
   "name": "datocms-plugin-cloudinary-picker",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": false,
   "dependencies": {
     "@cloudinary/react": "^1.4.0",
@@ -56,7 +56,6 @@
     "datocms-plugin",
     "datocms-plugin-cloudinary",
     "cloudinary",
-    "focal point",
     "image-focus"
   ],
   "repository": {

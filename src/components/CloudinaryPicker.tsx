@@ -8,6 +8,7 @@ type PropTypes = {
 
 export type Media = {
   public_id: string;
+  id: string;
   resource_type: string;
   secure_url?: string;
   width: number;

@@ -39,6 +39,7 @@ export function CloudinaryPickerButton({ ctx, label }: PropTypes) {
         height: item.height,
         metadata: item.metadata,
         public_id: item.public_id,
+        id: item.public_id,
         resource_type: item.resource_type,
         secure_url: item.secure_url,
         tags: item.tags,

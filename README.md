@@ -2,8 +2,6 @@
 
 A plugin that turns a JSON field into a Cloudinary picker
 
-**Including Focal point picker**
-
 ## Configuration
 
 Configure the plugin with Cloudinary cloud name & Cloudinary public api key
