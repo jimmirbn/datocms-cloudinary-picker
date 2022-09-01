@@ -5,7 +5,7 @@ import {
   RenderManualFieldExtensionConfigScreenCtx,
   RenderModalCtx,
 } from "datocms-plugin-sdk";
-import { Canvas } from "datocms-react-ui";
+import { Button, Canvas } from "datocms-react-ui";
 import { Image, Video, Placeholder } from "cloudinary-react";
 import { render } from "./utils/render";
 import "datocms-react-ui/styles.css";
@@ -18,8 +18,7 @@ import {
   FieldImage,
 } from "./components/CloudinaryPickerButton";
 import get from "lodash.get";
-// import { FocalPointPicker } from "./components/FocalPointPicker";
-// import { FocalPointPickerButton } from "./components/FocalPointPickerButton";
+import { AltText } from "./components/AltTextModal";
 
 const FIELD_EXTENSION_ID = "cloudinaryPicker";
 const INITIAL_HEIGHT = 80;
@@ -72,6 +71,25 @@ connect({
         get(ctx.formValues, ctx.fieldPath)
       ) as FieldImage;
 
+      const openAltTextModal = async () => {
+        const locale = ctx.locale;
+
+        const modalResult = (await ctx.openModal({
+          id: "altText",
+          width: 640,
+          parameters: {
+            item: currentValue,
+            locale,
+          },
+        })) as FieldImage["alt"];
+
+        if (modalResult) {
+          currentValue.alt = modalResult;
+
+          await ctx.setFieldValue(ctx.fieldPath, JSON.stringify(currentValue));
+        }
+      };
+
       if (currentValue && (currentValue.public_id || currentValue.id)) {
         const publicId = currentValue.public_id || currentValue.id;
         if (currentValue.duration) {
@@ -89,7 +107,6 @@ connect({
                   cursor: "pointer",
                 }}
               />
-              {currentValue.alt ? <p>Alt text: {currentValue.alt}</p> : null}
               <div style={{ display: "flex" }}>
                 <CloudinaryPickerButton label="Pick new asset" ctx={ctx} />
               </div>
@@ -103,37 +120,17 @@ connect({
                 publicId={publicId}
                 height="500"
               >
-                {/* {currentValue.focalPoint ? (
-                  <Transformation
-                    gravity="xy_center"
-                    height="500"
-                    x={currentValue.focalPoint.x}
-                    y={currentValue.focalPoint.y}
-                    crop="crop"
-                  />
-                ) : null} */}
                 <Placeholder />
               </Image>
-              {currentValue.alt ? <p>Alt text: {currentValue.alt}</p> : null}
-              <div style={{ display: "flex" }}>
+              <div style={{ display: "flex", alignItems: "center" }}>
                 <CloudinaryPickerButton label="Pick new asset" ctx={ctx} />
-                {/* <FocalPointPickerButton label="Set focal point" ctx={ctx} />
-                {currentValue.focalPoint ? (
-                  <Canvas ctx={ctx}>
-                    <Button
-                      onClick={async () => {
-                        delete currentValue["focalPoint"];
-
-                        await ctx.setFieldValue(
-                          ctx.fieldPath,
-                          JSON.stringify(currentValue)
-                        );
-                      }}
-                    >
-                      Remove focal point
-                    </Button>
-                  </Canvas>
-                ) : null} */}
+                <Button
+                  type="button"
+                  className="UploadCard__actions__item button"
+                  onClick={openAltTextModal}
+                >
+                  Add alt texts
+                </Button>
               </div>
             </Canvas>
           );
@@ -149,8 +146,8 @@ connect({
     switch (modalId) {
       case "cloudinaryPickerModal":
         return render(<CloudinaryPicker ctx={ctx} />);
-      // case "focalPointPickerModal":
-      //   return render(<FocalPointPicker ctx={ctx} />);
+      case "altText":
+        return render(<AltText ctx={ctx} />);
     }
   },
 });

@@ -24,6 +24,9 @@ export type Media = {
   uploaded_by?: string;
   url?: string;
   version?: number;
+  alt?: {
+    [key: string]: string;
+  };
   context?: {
     custom?: unknown;
   };

@@ -10,7 +10,6 @@ type PropTypes = {
 
 export interface FieldImage extends Media {
   caption?: string;
-  alt?: string;
 }
 
 export function FocalPointPickerButton({ ctx, label }: PropTypes) {
