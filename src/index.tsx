@@ -90,8 +90,14 @@ connect({
         }
       };
 
+      const clearMedia = async () => {
+        ctx.startAutoResizer();
+        await ctx.setFieldValue(ctx.fieldPath, null);
+      };
+
       if (currentValue && (currentValue.public_id || currentValue.id)) {
         const publicId = currentValue.public_id || currentValue.id;
+        ctx.startAutoResizer();
         if (currentValue.duration) {
           return render(
             <Canvas ctx={ctx}>
@@ -122,9 +128,19 @@ connect({
               >
                 <Placeholder />
               </Image>
-              <div style={{ display: "flex", alignItems: "center" }}>
+              <div>
                 <CloudinaryPickerButton label="Pick new asset" ctx={ctx} />
                 <Button
+                  style={{ marginLeft: "16px" }}
+                  buttonType="negative"
+                  type="button"
+                  className="UploadCard__actions__item button button--alert"
+                  onClick={clearMedia}
+                >
+                  Clear image
+                </Button>
+                <Button
+                  style={{ marginLeft: "16px" }}
                   type="button"
                   className="UploadCard__actions__item button"
                   onClick={openAltTextModal}
@@ -138,7 +154,9 @@ connect({
       }
 
       return render(
-        <CloudinaryPickerButton label="Choose cloudinary asset" ctx={ctx} />
+        <Canvas ctx={ctx}>
+          <CloudinaryPickerButton label="Choose cloudinary asset" ctx={ctx} />
+        </Canvas>
       );
     }
   },

@@ -1,4 +1,4 @@
-import { Canvas, Button } from "datocms-react-ui";
+import { Button } from "datocms-react-ui";
 import type { RenderFieldExtensionCtx } from "datocms-plugin-sdk";
 import type { Media } from "./CloudinaryPicker";
 
@@ -50,14 +50,8 @@ export function CloudinaryPickerButton({ ctx, label }: PropTypes) {
   };
 
   return (
-    <Canvas ctx={ctx}>
-      <Button
-        style={{ marginLeft: -10 }}
-        type="button"
-        onClick={handleOpenModal}
-      >
-        {label}
-      </Button>
-    </Canvas>
+    <Button type="button" onClick={handleOpenModal}>
+      {label}
+    </Button>
   );
 }
