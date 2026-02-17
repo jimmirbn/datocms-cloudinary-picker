@@ -115,6 +115,14 @@ connect({
               />
               <div style={{ display: "flex" }}>
                 <CloudinaryPickerButton label="Pick new asset" ctx={ctx} />
+                <Button
+                  style={{ marginLeft: "16px" }}
+                  buttonType="negative"
+                  type="button"
+                  onClick={clearMedia}
+                >
+                  Clear video
+                </Button>
               </div>
             </Canvas>
           );
